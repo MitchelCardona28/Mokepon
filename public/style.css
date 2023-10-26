@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@500&display=swap'); /*Importacion de las fuentes desde Google Fonts*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; /* Tipo de fuente generada traves del link que se importó desde Google fonts */
+  background-color: #5663AD;
+  margin: 0px;
+}
+
+#Seleccionar-mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  color: #FB4B66;
+  font-size: 30px;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.tarjetas {
+  display: flex; 
+  gap: 30px; 
+  margin-top: 13px;
+}
+
+.tarjeta-de-mokepon {
+  width: 163px;
+  height: 100px;
+  background: #BAD7E9;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 12px 4px #363b62;
+  display: flex;
+  border-radius: 20px;
+  border: solid 2px #FCFFE7;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta-de-mokepon img {
+  width: 73px;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label { /* Aplicacion de pseudoclase para los inputs y labels*/
+  background-color: #EB455F;
+  color: #FCFFE7;
+  box-shadow: 0px 0px 14px 2px;
+}
+
+.boton-seleccionar-mokepon {
+  width: 162px;
+  height: 30px;
+  border-radius: 15px;
+  border-color: white;
+  border-style: groove;
+  box-shadow: 0px 0px 12px -4px;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  color: white;
+  margin-top: 33px;
+}
+
+#Seleccionar-ataque {
+  flex-direction: column;
+  align-items: center;
+}
+
+.botones-de-ataque {
+  display: flex;
+  gap: 17px;
+  margin-top: 8px;
+}
+
+.ataques {
+  background-color: #BAD7E9;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  box-shadow: -7px 10px 7px -1px #363b62;
+  width: 141px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#mensajes {
+  width: 247px;
+  background: #FCFFE7;
+  padding: 20px;
+  margin-top: 31px;
+  border-radius: 20px;
+  box-shadow: -12px 13px 7px -3px #363b62;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#boton-reset {
+  border-radius: 10px;
+  border: none;
+  width: 116px;
+  height: 36px;
+  color: #FCFFE7;
+  background: #EB455F;
+  box-shadow: -7px 7px 4px -3px #b5b7a4;
+  font-family: 'Poppins', sans-serif;
+}
+
+.combate {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  text-align: center;
+  color: #FCFFE7;
+  gap: 17px;
+  margin-top: 20px;
+}
+
+#ver-mapa { /*Id de la sección donde está el canvas ubicado*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#mapa {
+   overflow-clip-margin: border-box;
+}
+
+.boton-de-direccion-arriba {
+  width: 60px;
+  height: 29px;
+  margin-top: 14px;
+  margin-bottom: 3px;
+  border-radius: 15px;
+  border-color: white;
+  border-style: groove;
+  background: transparent;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0px 0px 12px -4px;
+  user-select: none;
+}
+
+.botones-movimiento {
+  display: flex;
+  margin-top: 8px;
+  gap: 7px;
+}
+
+.botones-de-direccion {
+  width: 60px;
+  height: 29px;
+  border-radius: 15px;
+  border-color: white;
+  border-style: groove;
+  background: transparent;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0px 0px 12px -4px;
+  user-select: none;
+}
+
+@media (max-width: 425px) { /*Media query para aplicar Responsive Design para dispositivos mobile*/
+  .tarjetas {               
+    flex-direction: column;
+  }
+  .botones-de-ataque {
+    flex-direction: column;
+  }
+} /*Dentro de las llaves se agregan las clases e id's las cuales van a ser modificadas a partir de 0px hasta el max-width*/
