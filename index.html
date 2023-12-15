@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOKEPON!</title> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="Seleccionar-mascota">
+    <h1 class="titulo">Mokepon! 🔥💧🌱</h1>
+    
+    <h2 class="subtitulo">Elige tu mascota:</h2>
+
+    <div class="tarjetas" id="contenedorTarjetas"> <!-- Se puede añadir flexbox a cualquier elemento contenedor padre -->
+      
+    <!-- Es importante que los inputs tipo radio tengan el mismo contenido en name para poder ser seleccionados individualmente -->
+     
+    </div>
+        
+    <button class="boton-seleccionar-mokepon" id="boton-select">Continuar</button>
+  </section>
+
+  <section id="ver-mapa">
+    <h1 class="titulo">Recorre el mapa con tu Mokepon</h1>
+    <canvas id="mapa"></canvas>
+    <!-- <button onclick="moverArriba()">↑</button> Boton para mover a capipepo dentro del canvas. Añadir atributo onClick y su valor en este caso las siguientes funciones -->
+     <!-- Pendiente por aplicar display flex -->
+      <button ontouchstart="moverArriba()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverArriba()" class="boton-de-direccion-arriba">↑</button>
+    <div class="botones-movimiento">
+      <button ontouchstart="moverIzquierda()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" class="botones-de-direccion">←</button>
+      <button ontouchstart="moverAbajo()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()" class="botones-de-direccion">↓</button>
+      <button ontouchstart="moverDerecha()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()" class="botones-de-direccion">→</button>
+    </div>  
+    <!-- Ctrl + D para seleccionar las etiquetas similares -->
+  </section>
+  
+  <section id="Seleccionar-ataque">
+    <h1 class="titulo">Mokepon! 🔥💧🌱</h1>
+
+    <h2 class="subtitulo">Elige tu ataque:</h2>
+
+    <div class="botones-de-ataque" id="contenedor-ataques">
+      
+    </div>
+
+    <div id="mensajes">
+       <p id="resultado">Mucha suerte!!!</p>
+       <section id="reiniciar">
+          <button id="boton-reset">Volver a jugar</button>
+       </section>
+    </div>   
+       
+    <div class="combate">
+      <div>
+        <p id="jugador-vida">0</p>
+        <p id="mascota-jugador"></p>
+        <div id="ataque-del-jugador"></div>
+      </div>
+      <div>
+        <p id="enemigo-vida">0</p>
+        <p id="mascota-enemigo"></p>
+        <div id="ataque-del-enemigo"></div>  
+      </div>
+    </div>
+  </section>
+  <script src="js/script.js"></script>
+</body>
+</html>
